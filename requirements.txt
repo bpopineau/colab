@@ -1,6 +1,9 @@
 # — Core deep-learning stack —
-torch>=2.1.0        # CUDA 12 wheels on PyPI
-torchvision>=0.16.0
+torch==2.1.2+cu121          # unified CUDA 12.1 wheel, ~255 MB
+torchvision==0.16.2+cu121   # matching vision wheel
+--extra-index-url https://download.pytorch.org/whl/cu121
+
+
 
 # — Image processing —
 opencv-python-headless>=4.8.0
