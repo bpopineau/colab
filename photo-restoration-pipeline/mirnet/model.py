@@ -1,15 +1,25 @@
+from __future__ import annotations
+
+from pathlib import Path
+
 import torch
 from torch import nn
 
 
 class MIRNet(nn.Module):
-    """Skeleton MIRNet model for low-light image enhancement."""
+    """Minimal MIRNet stub."""
 
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__()
-        # TODO: Add full MIRNet architecture implementation
-        self.layer = nn.Identity()
+        # TODO: build actual MIRNet layers
+        self.layer: nn.Module = nn.Identity()
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
-        """Forward pass placeholder."""
+        """Return input tensor until model is implemented."""
         return self.layer(x)
+
+    def load_pretrained(
+        self, weights_path: Path
+    ) -> None:  # pragma: no cover - placeholder
+        """Load pretrained weights (not yet implemented)."""
+        raise NotImplementedError("Pretrained weights loading not implemented")
