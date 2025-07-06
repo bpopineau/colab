@@ -13,7 +13,7 @@ All files under this repository.
 2. PR body must list affected modules and a test plan.
 
 ## Data-Flow Overview
-`raw_image` ➡ **MIRNet** ➡ `stage1_out` ➡ **Real-ESRGAN** ➡ `final_out` (shown inline).
+`raw_image` ➡ **MIRNet** ➡ `final_out` (shown inline).
 
 ## Deferred Features
 - SwinIR refinement
