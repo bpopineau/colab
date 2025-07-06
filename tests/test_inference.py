@@ -22,17 +22,12 @@ def test_help(monkeypatch: pytest.MonkeyPatch) -> None:
             load=lambda *a, **k: {},
         ),
     )
-    monkeypatch.setitem(sys.modules, "numpy", dummy_module())
     monkeypatch.setitem(sys.modules, "PIL", dummy_module(Image=object))
     monkeypatch.setitem(
         sys.modules,
         "torchvision.transforms",
         dummy_module(ToTensor=lambda: None, ToPILImage=lambda: None),
     )
-    monkeypatch.setitem(
-        sys.modules, "basicsr.archs.rrdbnet_arch", dummy_module(RRDBNet=object)
-    )
-    monkeypatch.setitem(sys.modules, "realesrgan", dummy_module(RealESRGANer=object))
     monkeypatch.setitem(sys.modules, "mirnet.model", dummy_module(MIRNet=object))
 
     monkeypatch.setattr(sys, "argv", ["inference.py", "--help"])

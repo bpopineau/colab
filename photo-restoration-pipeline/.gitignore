@@ -1,4 +1,3 @@
 # Ignore heavy weight files
 mirnet/weights/*.pth
-realesrgan/
 output/
